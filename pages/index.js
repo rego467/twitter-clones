@@ -1,8 +1,22 @@
+import Final from "@/components/Final";
+import Middle from "@/components/Middle";
+import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
-      <h1>selamat siang</h1>
-    </main>
+    <div className="min-h-screen container mx-auto flex">
+      <main className="flex">
+        <div className="grow-0">
+          <Sidebar/>
+        </div>
+        <div className="grow">
+          <Middle />
+        </div>
+        <div className="grow-0">
+          <Final />
+        </div>  
+      </main>
+      
+    </div>
   )
 }
