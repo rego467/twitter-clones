@@ -10,40 +10,48 @@ export default function Sidebar() {
     {
       text : "Home",
       Icon: HomeIcon,
+      id:1
     
     },
     {
       text : "Hastag",
-      Icon: HashtagIcon
+      Icon: HashtagIcon,
+      id:2
     },
     {
       text : "Notifications",
-      Icon: BellIcon
+      Icon: BellIcon,
+      id:3
     },
     {
       text : "Messages",
-      Icon: InboxIcon
+      Icon: InboxIcon,
+      id:4
     },
     {
       text : "Bookmarks",
-      Icon: BookmarkIcon
+      Icon: BookmarkIcon,
+      id:5
     },
     {
       text : "List",
-      Icon: ClipboardIcon
+      Icon: ClipboardIcon,
+      id:6
     },
     {
       text : "Profile",
-      Icon: UserIcon
+      Icon: UserIcon,
+      id:7
     },
     {
       text : "More",
-      Icon: EllipsisHorizontalCircleIcon
+      Icon: EllipsisHorizontalCircleIcon,
+      id:8
     },
   ]
   return (
-    <div className='min-h-screen flex flex-col'>
-      <div className='mt-5 p-2'>
+    <div className='fixed hidden sm:inline h-full w-80'>
+      <div className='mt-5 p-4'>
         <Image
           width={35}
           height={35} 
@@ -51,9 +59,9 @@ export default function Sidebar() {
       </div>
       <div className='mt-7'>
       {
-        menus.map((menu, index)=>{
+        menus.map((menu)=>{
           return(
-            <div key={index}>
+            <div key={menu.id}>
               <SidebarMenu text={menu.text} Icon={menu.Icon} active={menu.active} />    
             </div>
           )
@@ -65,13 +73,15 @@ export default function Sidebar() {
       {/* BUTTON */}
       <button type='button' className='bg-blue-400 rounded-full w-56 p-2 text-lg text-white hover:bg-blue-300 hidden xl:inline mt-4'>tweet</button>
 
-      <div className='hoverCustom flex items-center mt-auto'>
+      <div className='flex items-center mt-48 p-3 hover:bg-gray-300 hover:rounded-lg cursor-pointer mr-2'>
         <img src="gunung.jpg"  className="rounded-full items-center flex w-10 h-10" />
-        <div className='hoverCustom hidden lg:inline'>
-          <h4>regoedwar</h4>
-          <p>@regoedwar</p>
+        <div className='hidden md:inline'>
+          <h4 className='px-4'>regoedwar</h4>
+          <p className='px-4'>@regoedwar</p>
         </div>
-        <EllipsisVerticalIcon width={30} />
+        <div className='hidden md:inline'>
+          <EllipsisVerticalIcon width={30} />  
+        </div>  
       </div>
     </div>
   )

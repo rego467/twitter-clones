@@ -1,9 +1,10 @@
 import React from 'react'
+import SearchFinal from './SearchFinal'
 
 export default function Final() {
   return (
-    <div>
-      <p>Lorem Ipsum is simply</p>
+    <div className='container h-full flex flex-col items-center'>
+      <SearchFinal />
     </div>
   )
 }

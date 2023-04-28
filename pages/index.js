@@ -4,19 +4,18 @@ import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
   return (
-    <div className="min-h-screen container mx-auto flex">
-      <main className="flex">
-        <div className="grow-0">
+    <main className="mx-auto min-h-screen max-w-7xl">
+      <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-3">
+        <div className="">
           <Sidebar/>
         </div>
-        <div className="grow">
-          <Middle />
-        </div>
-        <div className="grow-0">
-          <Final />
+        <div className="sm:col-span-2">
+          <Middle />    
         </div>  
-      </main>
-      
-    </div>
+        <div className="">
+          <Final />
+        </div>
+      </div>  
+    </main>
   )
 }
