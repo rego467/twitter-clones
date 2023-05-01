@@ -8,7 +8,7 @@ export default function Middle() {
   const posts = [
     {
       id: 1,
-      name:"rego edwar",
+      name:"Rego edwar",
       username:"@regoedwar",
       userImg:"gunung.jpg",
       img:"https://images.unsplash.com/photo-1682459155693-5c4427c6abb1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=60",
